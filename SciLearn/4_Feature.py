@@ -37,7 +37,7 @@ print mean
 titanic['age'].fillna(mean, inplace=True)
 titanic.fillna(0, inplace=True)
 
-from sklearn.cross_validation import  train_test_split
+from sklearn.cross_validation import train_test_split
 titanic_target = titanic['survived']
 titanic_data = titanic.drop(['name', 'row.names', 'survived'], axis = 1)
 X_train, X_test, y_train, y_test = train_test_split(titanic_data, titanic_target, test_size=0.25, random_state=33)
